@@ -1,0 +1,14 @@
+# mediamtx — local WebRTC mirror (WHIP in from OBS, WHEP out to browser)
+
+logLevel: info
+api: yes
+apiAddress: 127.0.0.1:9997
+
+webrtc: yes
+webrtcAddress: :8889
+# The demo is local-only, so no external STUN/TURN service is needed.
+webrtcICEServers2: []
+
+paths:
+  live:
+    source: publisher

@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Ignore local LaTeX build artifacts.
+*.aux
+*.log
+*.out
+*.toc
+missfont.log
+
+# Keep all recordings local; the public repository contains only the abstract preview image.
+/Demo.mp4
+/demo-preview.mp4
+
+# Local academic export contains the student identifier; keep it out of the public portfolio.
+/ayene-matrix_A_Live_Interactive_Dot-Matrix_Mirror.pdf

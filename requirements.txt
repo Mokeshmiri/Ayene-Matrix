@@ -1,0 +1,13 @@
+# Python side (a_sense.py). I install these with:
+#   pip install -r requirements.txt
+#
+# These are the versions I actually tested on (Python 3.12, macOS).
+# Newer versions usually work too.
+#
+# Processing side (B_Ayene) is separate: install only the oscP5 library
+# from inside the Processing IDE (Sketch > Import Library).
+
+opencv-python==4.13.0
+mediapipe==0.10.33
+numpy==2.3.5
+python-osc==1.10.2
