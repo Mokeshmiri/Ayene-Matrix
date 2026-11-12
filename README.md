@@ -23,19 +23,12 @@ It is built from two entities that talk only through OSC:
 
 ## How the data flows
 
-```
-webcam
-   |
-   v
-a_sense.py  (MediaPipe blendshapes -> 8 expression scores + portrait grid)
-   |
-   |  OSC /wek/inputs   port 6448   \  OSC /ayene/grid  port 12000
-   v                                  v
-Wekinator  (classifier, 4 moods)     B_Ayene.pde  (dot-matrix face)
-   |                                  ^
-   |  OSC /wek/outputs  port 12000 --/
-   v
-OBS  ->  MediaMTX (WHIP/WHEP)  ->  web/index.html
+```text
+Webcam → a_sense.py (MediaPipe)
+a_sense.py → Wekinator (/wek/inputs, port 6448)
+a_sense.py → B_Ayene.pde (/ayene/grid, port 12000)
+Wekinator → B_Ayene.pde (/wek/outputs, port 12000)
+B_Ayene.pde → OBS → MediaMTX → web/index.html
 ```
 
 | Direction | OSC address | Port |
